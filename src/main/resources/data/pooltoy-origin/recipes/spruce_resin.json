@@ -1,0 +1,13 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:spruce_log"
+    }
+  ],
+  "results": [
+    {
+      "item": "pooltoy-origin:spruce_resin"
+    }
+  ]
+}

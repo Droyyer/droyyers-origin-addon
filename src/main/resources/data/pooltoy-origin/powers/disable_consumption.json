@@ -1,0 +1,25 @@
+{
+	"name": "No Basic Needs",
+	"description": "Due to your nature, you will never need any sort of food! This comes at a cost of not being able to eat or drink anything, though.",
+
+	"type": "origins:prevent_item_use",
+	"item_condition": {
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:food"
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": [
+					{
+						"item": "minecraft:milk_bucket"
+					},
+					{
+						"item": "minecraft:potion"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,51 @@
+{
+    "name": "Lighter than a Feather",
+    "description": "As most of your body is entirely hollow, your weight is drastically lower than usual, making you faster on foot and negating fall damage! Sneaking while jumping also boosts your jump height!",
+    "badges": [
+        {
+            "type": "origins:keybind",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": "Sneak while jumping to activate jump boost!"
+        }
+    ],
+
+    "type": "origins:multiple",
+    "slow_fall": {
+        "type": "origins:modify_falling",
+        "velocity": 0.05,
+        "take_fall_damage": false
+    },
+
+    "increased_speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "value": 0.275,
+            "operation": "multiply_base"
+        }
+    },
+
+    "sneak_jump": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.225
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle cloud ~ ~ ~ 0.3 0.3 0.3 0.01 16 normal @a"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.strider.saddle"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:sneaking"
+        }
+    }
+}

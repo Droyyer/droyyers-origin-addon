@@ -1,0 +1,23 @@
+{
+	"name": "Pooltoy",
+	"description": "Inanimate objects brought to the living by magic, they are freed from basic needs and gain significant advantages, at the cost of unfathomable fragility.",
+
+	"powers": [
+		"pooltoy-origin:disable_consumption",
+		"pooltoy-origin:lightweight",
+		"pooltoy-origin:blunt_immunity",
+		"pooltoy-origin:float",
+
+		"pooltoy-origin:dimension_scale",
+
+		"pooltoy-origin:sharp_vulnerability",
+		"pooltoy-origin:synthetic_regen",
+		"pooltoy-origin:fragile",
+
+		"pooltoy-origin:disable_hunger"
+	],
+
+	"icon": "artifacts:helium_flamingo",
+	"order": 9999,
+	"impact": 3
+}

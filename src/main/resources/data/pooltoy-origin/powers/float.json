@@ -1,0 +1,38 @@
+{
+    "name": "Buoyant",
+    "description": "You naturally float up in any body of water due to your hollow vessel being full of air! This also means that you'll never get to go underwater, even if you really want to.",
+
+    "type": "origins:multiple",
+    "surface_level": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "y": 0.1
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.5
+        }
+    },
+    "walk_on_fluid": {
+        "type": "origins:walk_on_fluid",
+        "fluid": "minecraft:water"
+    },
+    "disable_suffocation": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 300
+        },
+        "interval": 20,
+        
+        "condition": {
+            "type": "origins:air",
+            "comparison": "<",
+            "compare_to": 300
+        }
+    }
+}

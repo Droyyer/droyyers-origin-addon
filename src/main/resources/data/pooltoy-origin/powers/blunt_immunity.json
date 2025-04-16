@@ -1,0 +1,76 @@
+{
+	"name": "Blunt Immunity",
+	"description": "Your soft exterior naturally squishes in as response to most sources of blunt trauma, resulting in complete cancellation of blunt damage!",
+
+	"type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+
+        "conditions": [
+            {
+                "type": "origins:attacker",
+                "entity_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:or",
+                                "conditions": [
+                                    {
+                                        "type": "origins:empty"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "origins:in_tag",
+                            "inverted": true,
+                            "tag": "pooltoy-origin:sharp_entities"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "inverted": true,
+                            "entity_type": "minecraft:hoglin"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "inverted": true,
+                            "entity_type": "minecraft:zoglin"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "inverted": true,
+                            "entity_type": "minecraft:polar_bear"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "inverted": true,
+                            "entity_type": "minecraft:creeper"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "inverted": true,
+                            "entity_type": "minecraft:blaze"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "inverted": true,
+                            "entity_type": "minecraft:warden"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:name",
+                "name": "flyIntoWall"
+            }
+        ]
+    },
+    "modifier": {
+        "name": "Blunt Immunity",
+        "operation": "multiply_total_multiplicative",
+        "value": -1
+    }
+}

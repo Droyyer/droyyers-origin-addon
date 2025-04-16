@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "pooltoy-origin:rubber"
+    }
+  ],
+  "results": [
+    {
+      "item": "pooltoy-origin:rubber_patch"
+    }
+  ]
+}

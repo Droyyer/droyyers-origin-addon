@@ -1,0 +1,107 @@
+{
+	"name": "Synthetic Vessel",
+	"description": "Your body is entirely compossed of synthetic materials, which will never regenerate on their own! The only way to go around this is to craft patches for self-repair.",
+
+	"type": "origins:multiple",
+	"no_regen": {
+		"type": "origins:disable_regen"
+	},
+
+	"rubber_patch": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "mainhand",
+					"action": {
+						"type": "origins:consume",
+						"amount": 1
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "amplifyeffect @s pooltoy-origin:punctured 2 9 -1"
+				},
+				{
+					"type": "origins:heal",
+					"amount": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.wool.break"
+				}
+			]
+		},
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "pooltoy-origin:rubber_patch"
+				}
+			}
+		}
+	},
+
+	"sealing": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "mainhand",
+					"action": {
+						"type": "origins:damage",
+						"amount": 1,
+						"ignore_unbreaking": true
+					}
+				},
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "pooltoy-origin:sealed",
+						"duration": 1200,
+						"amplifier": 0,
+						"is_ambient": true,
+						"show_particles": false,
+						"show_icon": true
+					}
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.sheep.shear"
+				}
+			]
+		},
+		"cooldown": 100,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "pooltoy-origin:ducttape"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"hidden": true,
+
+    "type": "origins:multiple",
+    "disable_hunger": {
+      "type": "origins:modify_exhaustion",
+      "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": -1
+      }
+    },
+
+    "replace_icons": {
+      "type": "origins:status_bar_texture",
+      "texture": "pooltoy-origin:textures/gui/pooltoy_icons.png"
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "name": "Pressure Differences",
+    "description": "Due to air being suspectible to pressure changes, your body will drastically grow or shrink across dimensions. You will remain normal in overworld, but shrink in the nether and grow in the end.",
+
+    "type": "origins:multiple",
+    "overworld": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:overworld"
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1 @s"
+                }
+            ]
+        }
+    },
+
+    "the_nether": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.7 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.7 @s"
+                }
+            ]
+        }
+    },
+
+    "the_end": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_end"
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1.5 @s"
+                }
+            ]
+        }
+    }
+}

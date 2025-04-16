@@ -1,0 +1,68 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:wooden_sword",
+    "minecraft:stone_sword",
+    "minecraft:iron_sword",
+    "minecraft:diamond_sword",
+    "minecraft:netherite_sword",
+
+    "minecraft:wooden_axe",
+    "minecraft:stone_axe",
+    "minecraft:iron_axe",
+    "minecraft:diamond_axe",
+    "minecraft:netherite_axe",
+
+    "minecraft:arrow",
+
+
+
+    "basicweapons:wooden_dagger",
+    "basicweapons:stone_dagger",
+    "basicweapons:iron_dagger",
+    "basicweapons:diamond_dagger",
+    "basicweapons:netherite_dagger",
+
+    "basicweapons:wooden_spear",
+    "basicweapons:stone_spear",
+    "basicweapons:iron_spear",
+    "basicweapons:diamond_spear",
+    "basicweapons:netherite_spear",
+
+    "basicweapons:wooden_glaive",
+    "basicweapons:stone_glaive",
+    "basicweapons:iron_glaive",
+    "basicweapons:diamond_glaive",
+    "basicweapons:netherite_glaive",
+
+
+    "ae2:certus_quartz_sword",
+    "ae2:nether_quartz_sword",
+    "ae2:fluix_sword",
+
+
+    "aquamirae:terrible_sword",
+    "aquamirae:fin_cutter",
+    "aquamirae:divider",
+    "aquamirae:poisoned_blade",
+    "aquamirae:coral_lance",
+    "aquamirae:dagger_of_greed",
+
+
+    "gobber2:gobber2_sword",
+    "gobber2:gobber2_sword_nether",
+    "gobber2:gobber2_sword_end",
+    "gobber2:gobber2_sword_sniper",
+
+    "gobber2:gobber2_axe",
+    "gobber2:gobber2_axe_nether",
+    "gobber2:gobber2_axe_end",
+
+    "gobber2:gobber2_tree_axe",
+    "gobber2:gobber2_tree_axe_nether",
+    "gobber2:gobber2_tree_axe_end",
+
+
+    "dungeonnowloading:spawner_sword"
+  ]
+}

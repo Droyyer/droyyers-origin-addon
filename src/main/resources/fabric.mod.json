@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "pooltoy-origin",
+	"version": "${version}",
+	"name": "Pooltoy Origin",
+	"description": "An addon to Origins that adds pooltoy origin to the game! Along with some other items, mainly to accompany the origin.",
+	"authors": [
+		"Droyyer"
+	],
+	"license": "MIT",
+	"icon": "assets/pooltoy-origin/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.droyyer.pooltoyorigin.PooltoyOrigin"
+		],
+		"client": [
+			"net.droyyer.pooltoyorigin.PooltoyOriginClient"
+		],
+		"fabric-datagen": [
+			"net.droyyer.pooltoyorigin.PooltoyOriginDataGenerator"
+		]
+	},
+	"mixins": [
+		"pooltoy-origin.mixins.json",
+		{
+			"config": "pooltoy-origin.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"create": "*",
+		"origins": "*"
+
+	}
+}
