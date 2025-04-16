@@ -2,7 +2,7 @@
 	"name": "Blunt Immunity",
 	"description": "Your soft exterior naturally squishes in as response to most sources of blunt trauma, resulting in complete cancellation of blunt damage!",
 
-	"type": "origins:modify_damage_taken",
+	"type": "origins:invulnerability",
     "damage_condition": {
         "type": "origins:or",
 
@@ -65,12 +65,11 @@
             {
                 "type": "origins:name",
                 "name": "flyIntoWall"
+            },
+            {
+                "type": "origins:name",
+                "name": "fall"
             }
         ]
-    },
-    "modifier": {
-        "name": "Blunt Immunity",
-        "operation": "multiply_total_multiplicative",
-        "value": -1
     }
 }
