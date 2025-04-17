@@ -7,6 +7,41 @@
 		"type": "origins:disable_regen"
 	},
 
+	"air_pump": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:heal",
+					"amount": 1
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.lava.extinguish"
+				}
+			]
+		},
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "pooltoy-origin:air_pump"
+				}
+			}
+		}
+	},
+
 	"rubber_patch": {
 		"type": "origins:active_self",
 		"entity_action": {
@@ -23,10 +58,6 @@
 				{
 					"type": "origins:execute_command",
 					"command": "amplifyeffect @s pooltoy-origin:punctured 2 9 -1"
-				},
-				{
-					"type": "origins:heal",
-					"amount": 4
 				},
 				{
 					"type": "origins:play_sound",

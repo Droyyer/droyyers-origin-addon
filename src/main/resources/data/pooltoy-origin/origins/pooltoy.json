@@ -17,7 +17,7 @@
 		"pooltoy-origin:disable_hunger"
 	],
 
-	"icon": "artifacts:helium_flamingo",
+	"icon": "minecraft:stick",
 	"order": 9999,
 	"impact": 3
 }

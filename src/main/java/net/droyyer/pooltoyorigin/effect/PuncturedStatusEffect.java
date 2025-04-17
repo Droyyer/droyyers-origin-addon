@@ -22,7 +22,7 @@ public class PuncturedStatusEffect extends StatusEffect {
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
             if (entity.hasStatusEffect(ModEffects.SEALED.value())) { return; }
-            if (entity.age % Math.round( -41 * Math.pow(amplifier+1, 0.5) + 140 ) == 0) {
+            if (entity.age % Math.round( -737.5 * Math.pow(amplifier+1, 0.05) + 837.5 ) == 0) {
                 entity.damage(entity.getDamageSources().magic(), 1);
             }
         }

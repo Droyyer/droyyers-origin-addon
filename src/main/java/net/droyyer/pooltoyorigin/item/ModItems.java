@@ -18,6 +18,7 @@ public class ModItems {
     public static final Item DUCTTAPE = registerItem("ducttape", new Item(new FabricItemSettings()
             .maxDamage(3)
     ));
+    public static final Item AIR_PUMP = registerItem("air_pump", new Item(new FabricItemSettings()));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
@@ -27,6 +28,7 @@ public class ModItems {
     private static void addItemsToUtilityItemGroup(FabricItemGroupEntries entries) {
         entries.add(RUBBER_PATCH);
         entries.add(DUCTTAPE);
+        entries.add(AIR_PUMP);
     }
 
     private static Item registerItem(String name, Item item) {
