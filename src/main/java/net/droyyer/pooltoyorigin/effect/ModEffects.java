@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> PUNCTURED = registerStatusEffect("punctured", new PuncturedStatusEffect());
     public static final RegistryEntry<StatusEffect> SEALED = registerStatusEffect("sealed", new SealedStatusEffect());
+    public static final RegistryEntry<StatusEffect> DEFLATING = registerStatusEffect("deflating", new DeflatingStatusEffect());
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {

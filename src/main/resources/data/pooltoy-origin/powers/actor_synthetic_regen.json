@@ -1,0 +1,141 @@
+{
+	"hidden": true,
+
+	"type": "origins:multiple",
+
+	"air_pump": {
+		"type": "origins:action_on_being_used",
+		"bientity_action": {
+			"type": "origins:target_action",
+			"action": {
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:power",
+					"power": "pooltoy-origin:stasis"
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "power revoke @s pooltoy-origin:stasis"
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "scale set pehkui:height 1 @s"
+						}
+					]
+				},
+				"else_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:heal",
+							"amount": 1
+						},
+						{
+							"type": "origins:apply_effect",
+							"effect": {
+								"effect": "minecraft:slowness",
+								"duration": 60,
+								"amplifier": 2,
+								"is_ambient": true,
+								"show_particles": false,
+								"show_icon": false
+							}
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "minecraft:block.lava.extinguish"
+						}
+					]
+				}
+			}
+		},
+		"cooldown": 50,
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "pooltoy-origin:air_pump"
+			}
+		}
+	},
+
+	"rubber_patch": {
+		"type": "origins:action_on_being_used",
+		"bientity_action": {
+			"type": "origins:target_action",
+			"action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:equipped_item_action",
+						"equipment_slot": "mainhand",
+						"action": {
+							"type": "origins:consume",
+							"amount": 1
+						}
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "amplifyeffect @s pooltoy-origin:punctured 2 9 -1"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:block.wool.break"
+					}
+				]
+			}
+		},
+		"cooldown": 50,
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "pooltoy-origin:rubber_patch"
+			}
+		}
+	},
+
+	"ducttape": {
+		"type": "origins:action_on_being_used",
+		"bientity_action": {
+			"type": "origins:target_action",
+			"action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:equipped_item_action",
+						"equipment_slot": "mainhand",
+						"action": {
+							"type": "origins:damage",
+							"amount": 1,
+							"ignore_unbreaking": true
+						}
+					},
+					{
+						"type": "origins:apply_effect",
+						"effect": {
+							"effect": "pooltoy-origin:sealed",
+							"duration": 1200,
+							"amplifier": 0,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": true
+						}
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:entity.sheep.shear"
+					}
+				]
+			}
+		},
+		"cooldown": 100,
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "pooltoy-origin:ducttape"
+			}
+		}
+	}
+}

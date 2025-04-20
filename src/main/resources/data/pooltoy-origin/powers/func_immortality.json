@@ -1,0 +1,24 @@
+{
+  "name": "Functional Immortality",
+  "description": "Thanks to your abnormal nature, you can't exactly die, but when your health drops to zero, you will instead be incapacitated. Another player will be able to bring you back up through use of equipment tools. If help isn't coming, you can still press secondary power key to die normally.",
+
+  "type": "origins:prevent_death",
+  "damage_condition": {
+    "type": "origins:in_tag",
+    "inverted": true,
+    "tag": "pooltoy-origin:critical_air_loss"
+  },
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "power grant @s pooltoy-origin:stasis"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 0.01 @s"
+      }
+    ]
+  }
+}

@@ -2,74 +2,156 @@
 	"name": "Blunt Immunity",
 	"description": "Your soft exterior naturally squishes in as response to most sources of blunt trauma, resulting in complete cancellation of blunt damage!",
 
-	"type": "origins:invulnerability",
-    "damage_condition": {
-        "type": "origins:or",
-
-        "conditions": [
-            {
-                "type": "origins:attacker",
-                "entity_condition": {
-                    "type": "origins:and",
-                    "conditions": [
-                        {
-                            "type": "origins:equipped_item",
-                            "equipment_slot": "mainhand",
-                            "item_condition": {
-                                "type": "origins:or",
-                                "conditions": [
-                                    {
-                                        "type": "origins:empty"
-                                    }
-                                ]
+    "type": "origins:multiple",
+    "blunt": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:equipped_item",
+                                "equipment_slot": "mainhand",
+                                "item_condition": {
+                                    "type": "origins:or",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:is_damageable",
+                                            "inverted": true
+                                        },
+                                        {
+                                            "type": "origins:enchantable",
+                                            "inverted": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "origins:in_tag",
+                                "inverted": true,
+                                "tag": "pooltoy-origin:sharp_entities"
+                            },
+                            {
+                                "type": "origins:entity_type",
+                                "inverted": true,
+                                "entity_type": "minecraft:hoglin"
+                            },
+                            {
+                                "type": "origins:entity_type",
+                                "inverted": true,
+                                "entity_type": "minecraft:zoglin"
+                            },
+                            {
+                                "type": "origins:entity_type",
+                                "inverted": true,
+                                "entity_type": "minecraft:polar_bear"
+                            },
+                            {
+                                "type": "origins:entity_type",
+                                "inverted": true,
+                                "entity_type": "minecraft:creeper"
+                            },
+                            {
+                                "type": "origins:entity_type",
+                                "inverted": true,
+                                "entity_type": "minecraft:blaze"
+                            },
+                            {
+                                "type": "origins:entity_type",
+                                "inverted": true,
+                                "entity_type": "minecraft:warden"
+                            },
+                            {
+                                "type": "origins:in_tag",
+                                "inverted": true,
+                                "tag": "pooltoy-origin:critical_air_loss"
                             }
-                        },
-                        {
-                            "type": "origins:in_tag",
-                            "inverted": true,
-                            "tag": "pooltoy-origin:sharp_entities"
-                        },
-                        {
-                            "type": "origins:entity_type",
-                            "inverted": true,
-                            "entity_type": "minecraft:hoglin"
-                        },
-                        {
-                            "type": "origins:entity_type",
-                            "inverted": true,
-                            "entity_type": "minecraft:zoglin"
-                        },
-                        {
-                            "type": "origins:entity_type",
-                            "inverted": true,
-                            "entity_type": "minecraft:polar_bear"
-                        },
-                        {
-                            "type": "origins:entity_type",
-                            "inverted": true,
-                            "entity_type": "minecraft:creeper"
-                        },
-                        {
-                            "type": "origins:entity_type",
-                            "inverted": true,
-                            "entity_type": "minecraft:blaze"
-                        },
-                        {
-                            "type": "origins:entity_type",
-                            "inverted": true,
-                            "entity_type": "minecraft:warden"
-                        }
-                    ]
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flyIntoWall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall"
                 }
-            },
-            {
-                "type": "origins:name",
-                "name": "flyIntoWall"
-            },
-            {
-                "type": "origins:name",
-                "name": "fall"
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+    "empty": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:empty"
+                        }
+                    },
+                    {
+                        "type": "origins:sneaking"
+                    }
+                ]
             }
-        ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        },
+        "self_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:status_effect",
+                "effect": "pooltoy-origin:deflating",
+                "min_duration": -1
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:clear_effect",
+                        "effect": "pooltoy-origin:deflating"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.item.pickup"
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "pooltoy-origin:deflating",
+                            "duration": -1,
+                            "amplifier": 0,
+                            "is_ambient": true,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.item.pickup"
+                    }
+                ]
+            }
+        }
     }
 }

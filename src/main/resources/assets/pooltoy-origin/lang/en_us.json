@@ -6,5 +6,9 @@
   "item.pooltoy-origin.air_pump": "Air Pump",
 
   "effect.pooltoy-origin.punctured": "Punctured",
-  "effect.pooltoy-origin.sealed": "Sealed"
+  "effect.pooltoy-origin.sealed": "Sealed",
+  "effect.pooltoy-origin.deflating": "Open Nozzle",
+
+  "death.attack.air_loss": "%1$s has run out of air",
+  "death.attack.full_air_loss": "%1$s has run out of air"
 }

@@ -1,6 +1,6 @@
 {
 	"name": "Synthetic Vessel",
-	"description": "Your body is entirely compossed of synthetic materials, which will never regenerate on their own! The only way to go around this is to craft patches for self-repair.",
+	"description": "Your body is entirely compossed of synthetic materials, which will never regenerate on their own! The only way to go around this is to craft patches and an air pump for self-repair.",
 
 	"type": "origins:multiple",
 	"no_regen": {
@@ -17,6 +17,17 @@
 					"amount": 1
 				},
 				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "minecraft:slowness",
+						"duration": 60,
+						"amplifier": 2,
+						"is_ambient": true,
+						"show_particles": false,
+						"show_icon": false
+					}
+				},
+				{
 					"type": "origins:play_sound",
 					"sound": "minecraft:block.lava.extinguish"
 				}
@@ -31,14 +42,24 @@
 			"continuous": true
 		},
 		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "mainhand",
-			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"item": "pooltoy-origin:air_pump"
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "pooltoy-origin:air_pump"
+						}
+					}
+				},
+				{
+					"type": "origins:power",
+					"inverted": true,
+					"power": "pooltoy-origin:stasis"
 				}
-			}
+			]
 		}
 	},
 
@@ -74,14 +95,24 @@
 			"continuous": true
 		},
 		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "mainhand",
-			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"item": "pooltoy-origin:rubber_patch"
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "pooltoy-origin:rubber_patch"
+						}
+					}
+				},
+				{
+					"type": "origins:power",
+					"inverted": true,
+					"power": "pooltoy-origin:stasis"
 				}
-			}
+			]
 		}
 	},
 
@@ -125,14 +156,73 @@
 			"continuous": true
 		},
 		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "mainhand",
-			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"item": "pooltoy-origin:ducttape"
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "pooltoy-origin:ducttape"
+						}
+					}
+				},
+				{
+					"type": "origins:power",
+					"inverted": true,
+					"power": "pooltoy-origin:stasis"
 				}
+			]
+		}
+	},
+
+	"toggle_deflate": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:status_effect",
+				"effect": "pooltoy-origin:deflating",
+				"min_duration": -1
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:clear_effect",
+						"effect": "pooltoy-origin:deflating"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:entity.item.pickup"
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:apply_effect",
+						"effect": {
+							"effect": "pooltoy-origin:deflating",
+							"duration": -1,
+							"amplifier": 0,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": true
+						}
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:entity.item.pickup"
+					}
+				]
 			}
+		},
+		"cooldown": 2,
+		"hud_render": {
+			"should_render": false
 		}
 	}
 }

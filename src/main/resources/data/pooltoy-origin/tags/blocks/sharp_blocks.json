@@ -2,14 +2,29 @@
   "replace": false,
   "values": [
     "minecraft:gravel",
-    "minecraft:stonecutter",
     "minecraft:dead_bush",
     "minecraft:rose_bush",
 
+    "minecraft:small_amethyst_bud",
+    "minecraft:medium_amethyst_bud",
+    "minecraft:large_amethyst_bud",
+    "minecraft:amethyst_cluster",
 
 
-    "create:mechanical_saw",
+
     "create:mechanical_drill",
-    "create:mechanical_harvester"
+    "create:mechanical_harvester",
+
+
+    "ae2:small_quartz_bud",
+    "ae2:medium_quartz_bud",
+    "ae2:large_quartz_bud",
+    "ae2:quartz_cluster",
+
+
+    "biomesoplenty:small_rose_quartz_bud",
+    "biomesoplenty:medium_rose_quartz_bud",
+    "biomesoplenty:large_rose_quartz_bud",
+    "biomesoplenty:rose_quartz_cluster"
   ]
 }

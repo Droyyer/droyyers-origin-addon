@@ -11,15 +11,31 @@
         },
         "interval": 1,
         "condition": {
-            "type": "origins:fluid_height",
-            "fluid": "minecraft:water",
-            "comparison": ">",
-            "compare_to": 0.5
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0.5
+                },
+                {
+                    "type": "origins:health",
+                    "comparison": ">",
+                    "compare_to": 6
+                }
+            ]
         }
     },
     "walk_on_fluid": {
         "type": "origins:walk_on_fluid",
-        "fluid": "minecraft:water"
+        "fluid": "minecraft:water",
+
+        "condition": {
+            "type": "origins:health",
+            "comparison": ">",
+            "compare_to": 6
+        }
     },
     "disable_suffocation": {
         "type": "origins:action_over_time",

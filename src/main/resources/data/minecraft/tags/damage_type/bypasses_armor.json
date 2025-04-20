@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "pooltoy-origin:air_loss",
+    "pooltoy-origin:full_air_loss"
+  ]
+}

@@ -6,6 +6,7 @@
 		"pooltoy-origin:disable_consumption",
 		"pooltoy-origin:lightweight",
 		"pooltoy-origin:blunt_immunity",
+		"pooltoy-origin:func_immortality",
 		"pooltoy-origin:float",
 
 		"pooltoy-origin:dimension_scale",
@@ -14,10 +15,11 @@
 		"pooltoy-origin:synthetic_regen",
 		"pooltoy-origin:fragile",
 
-		"pooltoy-origin:disable_hunger"
+		"pooltoy-origin:disable_hunger",
+		"pooltoy-origin:actor_synthetic_regen"
 	],
 
-	"icon": "minecraft:stick",
+	"icon": "artifacts:helium_flamingo",
 	"order": 9999,
 	"impact": 3
 }

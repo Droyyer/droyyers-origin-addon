@@ -6,10 +6,10 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
 
-public class PuncturedStatusEffect extends StatusEffect {
-    public PuncturedStatusEffect() {
+public class DeflatingStatusEffect extends StatusEffect {
+    public DeflatingStatusEffect() {
         super(
-                StatusEffectCategory.HARMFUL,
+                StatusEffectCategory.NEUTRAL,
                 0xC3C2CC);
     }
 
@@ -22,8 +22,7 @@ public class PuncturedStatusEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-            if (entity.hasStatusEffect(ModEffects.SEALED.value())) { return; }
-            if (entity.age % Math.round( -737.5 * Math.pow(amplifier+1, 0.05) + 837.5 ) == 0) {
+            if (entity.age % 30 == 0) {
                 entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.AIR_LOSS), 1.0f);
             }
         }
