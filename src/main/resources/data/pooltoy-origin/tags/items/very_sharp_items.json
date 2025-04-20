@@ -2,15 +2,9 @@
   "replace": false,
   "values": [
     "minecraft:trident",
-
-
-    "arsenal:scythe",
-
-
-    "aquamirae:whisper_of_the_abyss",
-    "aquamirae:remnants_saber",
-
-
-    "dimdoors:rift_blade"
+    { "value": "arsenal:scythe", "required": false },
+    { "value": "aquamirae:whisper_of_the_abyss", "required": false },
+    { "value": "aquamirae:remnants_saber", "required": false },
+    { "value": "dimdoors:rift_blade", "required": false }
   ]
 }
