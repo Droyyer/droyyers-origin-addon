@@ -19,7 +19,7 @@
 		"pooltoy-origin:actor_synthetic_regen"
 	],
 
-	"icon": "artifacts:helium_flamingo",
+	"icon": "minecraft:stick",
 	"order": 9999,
 	"impact": 3
 }

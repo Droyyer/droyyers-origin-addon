@@ -15,17 +15,16 @@
                         "conditions": [
                             {
                                 "type": "origins:equipped_item",
-                                "equipment_slot": "mainhand",
+                                "equipment_slot": "offhand",
                                 "item_condition": {
                                     "type": "origins:or",
+                                    "inverted": true,
                                     "conditions": [
                                         {
-                                            "type": "origins:is_damageable",
-                                            "inverted": true
+                                            "type": "origins:enchantable"
                                         },
                                         {
-                                            "type": "origins:enchantable",
-                                            "inverted": true
+                                            "type": "origins:is_damageable"
                                         }
                                     ]
                                 }
@@ -64,11 +63,6 @@
                                 "type": "origins:entity_type",
                                 "inverted": true,
                                 "entity_type": "minecraft:warden"
-                            },
-                            {
-                                "type": "origins:in_tag",
-                                "inverted": true,
-                                "tag": "pooltoy-origin:critical_air_loss"
                             }
                         ]
                     }

@@ -10,5 +10,6 @@
   "effect.pooltoy-origin.deflating": "Open Nozzle",
 
   "death.attack.air_loss": "%1$s has run out of air",
-  "death.attack.full_air_loss": "%1$s has run out of air"
+  "death.attack.full_air_loss": "%1$s has run out of air",
+  "death.attack.full_air_loss.player": "%1$s has run out of air whilst trying to escape %2$s"
 }
