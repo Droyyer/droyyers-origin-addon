@@ -2,14 +2,14 @@
   "item.pooltoy-origin.spruce_resin": "Spruce Resin",
   "item.pooltoy-origin.rubber": "Rubber",
   "item.pooltoy-origin.rubber_patch": "Rubber Patch",
-  "item.pooltoy-origin.ducttape": "Ducttape",
+  "item.pooltoy-origin.ducttape": "Duct Tape",
   "item.pooltoy-origin.air_pump": "Air Pump",
 
   "effect.pooltoy-origin.punctured": "Punctured",
   "effect.pooltoy-origin.sealed": "Sealed",
   "effect.pooltoy-origin.deflating": "Open Nozzle",
 
-  "death.attack.air_loss": "%1$s has run out of air",
-  "death.attack.full_air_loss": "%1$s has run out of air",
-  "death.attack.full_air_loss.player": "%1$s has run out of air whilst trying to escape %2$s"
+  "death.attack.air_loss": "%1$s ran out of air",
+  "death.attack.full_air_loss": "%1$s ran out of air",
+  "death.attack.full_air_loss.player": "%1$s ran out of air whilst trying to escape %2$s"
 }
