@@ -52,7 +52,7 @@
 				}
 			}
 		},
-		"cooldown": 50,
+		"cooldown": 1,
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
@@ -87,7 +87,7 @@
 				]
 			}
 		},
-		"cooldown": 50,
+		"cooldown": 1,
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
@@ -130,7 +130,7 @@
 				]
 			}
 		},
-		"cooldown": 100,
+		"cooldown": 1,
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
