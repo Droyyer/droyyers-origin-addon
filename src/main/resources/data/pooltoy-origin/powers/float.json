@@ -1,6 +1,6 @@
 {
     "name": "Buoyant",
-    "description": "You naturally float up in any body of water due to your hollow vessel being full of air! This also means that you'll never get to go underwater, even if you really want to.",
+    "description": "You naturally float up in any body of water due to your hollow vessel being full of air! This also means that you'll never get to go underwater, unless you have 3 or less hearts.",
 
     "type": "origins:multiple",
     "surface_level": {
