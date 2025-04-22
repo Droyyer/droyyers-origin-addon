@@ -18,16 +18,36 @@
                                 "equipment_slot": "offhand",
                                 "item_condition": {
                                     "type": "origins:or",
-                                    "inverted": true,
                                     "conditions": [
                                         {
-                                            "type": "origins:enchantable"
+                                            "type": "origins:is_damageable",
+                                            "inverted": true
                                         },
                                         {
-                                            "type": "origins:is_damageable"
+                                            "type": "origins:empty"
                                         }
                                     ]
                                 }
+                            },
+                            {
+                                "type": "and",
+                                "inverted": true,
+                                "conditions": [
+                                    {
+                                        "type": "origins:sneaking"
+                                    },
+                                    {
+                                        "type": "origins:entity_type",
+                                        "entity_type": "minecraft:player"
+                                    },
+                                    {
+                                        "type": "origins:equipped_item",
+                                        "equipment_slot": "offhand",
+                                        "item_condition": {
+                                            "type": "origins:empty"
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "type": "origins:in_tag",
@@ -80,24 +100,6 @@
         "modifier": {
             "operation": "multiply_total",
             "value": -1
-        }
-    },
-
-    "empty": {
-        "type": "origins:modify_damage_taken",
-        "damage_condition": {
-            "type": "origins:attacker",
-            "entity_condition": {
-                "type": "origins:equipped_item",
-                "equipment_slot": "mainhand",
-                "item_condition": {
-                    "type": "origins:empty"
-                }
-            }
-        },
-        "modifier": {
-            "operation": "multiply_total",
-            "value": -0.99
         }
     },
 
