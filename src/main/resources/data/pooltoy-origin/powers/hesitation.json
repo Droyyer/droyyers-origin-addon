@@ -1,0 +1,61 @@
+{
+  "name": "Piercing Glare",
+  "description": "Your form appears far mightier than it actually is to some more clueless foes, making them hesitate for a few seconds before attacking. More intelligent enemies won't be deceived, though.",
+  "type": "origins:multiple",
+  "hesitant_activate": {
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+      "type": "origins:area_of_effect",
+      "radius": 15,
+      "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+          "type": "origins:and",
+          "conditions": [
+            {
+              "type": "origins:in_tag",
+              "tag": "pooltoy-origin:hesitant"
+            },
+            {
+              "inverted": true,
+              "type": "origins:status_effect",
+              "effect": "minecraft:nausea"
+            }
+          ]
+        }
+      },
+      "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:apply_effect",
+              "effect": {
+                "effect": "minecraft:nausea",
+                "duration": 12000,
+                "amplifier": 10,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+              }
+            },
+            {
+              "type": "origins:execute_command",
+              "command": "data merge entity @s {NoAI:1b}"
+            },
+            {
+              "type": "origins:delay",
+              "action": {
+                "type": "origins:execute_command",
+                "command": "data merge entity @s {NoAI:0b}"
+              },
+              "ticks": 40
+            }
+          ]
+        }
+      }
+    }
+  }
+}

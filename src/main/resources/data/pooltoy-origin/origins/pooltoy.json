@@ -19,7 +19,7 @@
 		"pooltoy-origin:actor_synthetic_regen"
 	],
 
-	"icon": "minecraft:stick",
+	"icon": "minecraft:glass_bottle",
 	"order": 9999,
 	"impact": 3
 }

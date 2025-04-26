@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:coarse_dirt",
+    "minecraft:dirt",
+    "minecraft:grass_block",
+    "minecraft:mud",
+    "minecraft:muddy_mangrove_roots",
+    "minecraft:mycelium",
+    "minecraft:podzol",
+    "minecraft:rooted_dirt",
+
+    "minecraft:andesite",
+    "minecraft:deepslate",
+    "minecraft:diorite",
+    "minecraft:granite",
+    "minecraft:stone",
+    "minecraft:tuff"
+  ]
+}

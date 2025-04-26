@@ -1,0 +1,19 @@
+{
+	"name": "Aquatic",
+	"description": "Water is your domain, but your mobility is hindered on the surface, losing some of the benefits of your primary origin. Treat this subtype as the merling of the pooltoy world.",
+
+	"powers": [
+		"origins:swim_speed",
+		"origins:aqua_affinity",
+		"origins:water_vision",
+		"origins:like_water",
+
+		"pooltoy-origin:aquatic_on_surface",
+
+		"pooltoy-origin:aquatic_overwrite"
+	],
+
+	"icon": "minecraft:axolotl_bucket",
+	"order": 3,
+	"impact": 2
+}

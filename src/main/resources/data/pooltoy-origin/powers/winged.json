@@ -1,0 +1,30 @@
+{
+  "name": "Wings",
+  "description": "You have a built-in elytra, which allows you to fly just like you would with a normal one! You can toggle this ability with ternary key.",
+
+  "badges": [
+    {
+      "type": "origins:keybind",
+      "sprite": "origins:textures/gui/badge/toggle.png",
+      "text": "Toggle with %s"
+    }
+  ],
+
+  "type": "origins:multiple",
+
+  "toggle": {
+    "type": "origins:toggle",
+    "active_by_default": true,
+    "key": {
+      "key": "key.origins.ternary_active"
+    }
+  },
+  "main": {
+    "type": "origins:elytra_flight",
+    "render_elytra": true,
+    "condition": {
+      "type": "origins:power_active",
+      "power": "*:*_toggle"
+    }
+  }
+}

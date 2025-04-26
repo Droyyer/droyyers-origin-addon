@@ -1,0 +1,13 @@
+{
+	"name": "Large",
+	"description": "You are significantly larger than normal. While this brings you back to 10 hearts, it also hinders your mobility.",
+
+	"powers": [
+		"pooltoy-origin:not_fragile",
+		"pooltoy-origin:large_dimension_scale"
+	],
+
+	"icon": "minecraft:iron_chestplate",
+	"order": 1,
+	"impact": 1
+}

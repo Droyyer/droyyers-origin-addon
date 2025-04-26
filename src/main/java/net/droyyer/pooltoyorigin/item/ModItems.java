@@ -20,16 +20,8 @@ public class ModItems {
     ));
     public static final Item AIR_PUMP = registerItem("air_pump", new Item(new FabricItemSettings()));
 
+    public static final Item DEFLATED_PLAYER = registerItem("deflated_player", new Item(new FabricItemSettings()));
 
-    private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
-        entries.add(SPRUCE_RESIN);
-        entries.add(RUBBER);
-    }
-    private static void addItemsToUtilityItemGroup(FabricItemGroupEntries entries) {
-        entries.add(RUBBER_PATCH);
-        entries.add(DUCTTAPE);
-        entries.add(AIR_PUMP);
-    }
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PooltoyOrigin.MOD_ID, name), item);
@@ -37,9 +29,6 @@ public class ModItems {
 
     public static void registerItems() {
         PooltoyOrigin.LOGGER.info("Registering items for " + PooltoyOrigin.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToUtilityItemGroup);
     }
 
 }

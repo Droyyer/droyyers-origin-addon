@@ -1,0 +1,12 @@
+{
+	"name": "Winged",
+	"description": "You have a pair of wings, which allow you to fly through the skies the same way you would with an elytra.",
+
+	"powers": [
+		"pooltoy-origin:winged"
+	],
+
+	"icon": "minecraft:elytra",
+	"order": 2,
+	"impact": 1
+}

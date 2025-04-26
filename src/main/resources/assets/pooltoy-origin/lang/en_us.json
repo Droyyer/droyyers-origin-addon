@@ -5,9 +5,13 @@
   "item.pooltoy-origin.ducttape": "Ducttape",
   "item.pooltoy-origin.air_pump": "Air Pump",
 
+  "block.pooltoy-origin.highlighted_sculk": "Highlighted Sculk",
+
   "effect.pooltoy-origin.punctured": "Punctured",
   "effect.pooltoy-origin.sealed": "Sealed",
   "effect.pooltoy-origin.deflating": "Open Nozzle",
+
+  "itemgroup.pooltoy_origin": "Pooltoy Origin",
 
   "death.attack.air_loss": "%1$s ran out of air",
   "death.attack.full_air_loss": "%1$s ran out of air",

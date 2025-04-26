@@ -12,19 +12,18 @@
 
 
 
-    "create:mechanical_drill",
-    "create:mechanical_harvester",
+    { "id": "create:mechanical_drill", "required": false },
+    { "id": "create:mechanical_harvester", "required": false },
+
+    { "id": "ae2:small_quartz_bud", "required": false },
+    { "id": "ae2:medium_quartz_bud", "required": false },
+    { "id": "ae2:large_quartz_bud", "required": false },
+    { "id": "ae2:quartz_cluster", "required": false },
 
 
-    "ae2:small_quartz_bud",
-    "ae2:medium_quartz_bud",
-    "ae2:large_quartz_bud",
-    "ae2:quartz_cluster",
-
-
-    "biomesoplenty:small_rose_quartz_bud",
-    "biomesoplenty:medium_rose_quartz_bud",
-    "biomesoplenty:large_rose_quartz_bud",
-    "biomesoplenty:rose_quartz_cluster"
+    { "id": "biomesoplenty:small_rose_quartz_bud", "required": false },
+    { "id": "biomesoplenty:medium_rose_quartz_bud", "required": false },
+    { "id": "biomesoplenty:large_rose_quartz_bud", "required": false },
+    { "id": "biomesoplenty:rose_quartz_cluster", "required": false }
   ]
 }

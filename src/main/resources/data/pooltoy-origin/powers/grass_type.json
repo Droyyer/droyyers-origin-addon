@@ -1,0 +1,35 @@
+{
+  "name": "Grass Type",
+  "description": "Being a grass type Pokemon, you are really vulnerable to any sort of fire. You take double the damage from any source of such.",
+
+  "type": "origins:modify_damage_taken",
+  "damage_condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:name",
+        "name": "fireball"
+      },
+      {
+        "type": "origins:name",
+        "name": "hotFloor"
+      },
+      {
+        "type": "origins:name",
+        "name": "inFire"
+      },
+      {
+        "type": "origins:name",
+        "name": "lava"
+      },
+      {
+        "type": "origins:name",
+        "name": "onFire"
+      }
+    ]
+  },
+  "modifier": {
+    "operation": "multiply_total",
+    "value": 1
+  }
+}

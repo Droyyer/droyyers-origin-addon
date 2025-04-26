@@ -1,0 +1,10 @@
+{
+	"name": "None",
+	"description": "Exists only to prevent other origins from having access to this layer. Select Default instead, as this subtype is literally meaningless",
+
+	"powers": [],
+
+	"icon": "minecraft:barrier",
+	"order": 9999,
+	"impact": 0
+}

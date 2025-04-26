@@ -1,0 +1,12 @@
+{
+	"name": "Default",
+	"description": "A default pooltoy with no modifications.",
+
+	"powers": [
+
+	],
+
+	"icon": "minecraft:glass_bottle",
+	"order": 1,
+	"impact": 0
+}

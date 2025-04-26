@@ -15,7 +15,7 @@
                         "conditions": [
                             {
                                 "type": "origins:equipped_item",
-                                "equipment_slot": "offhand",
+                                "equipment_slot": "mainhand",
                                 "item_condition": {
                                     "type": "origins:or",
                                     "conditions": [
@@ -30,7 +30,7 @@
                                 }
                             },
                             {
-                                "type": "and",
+                                "type": "origins:and",
                                 "inverted": true,
                                 "conditions": [
                                     {
@@ -42,7 +42,7 @@
                                     },
                                     {
                                         "type": "origins:equipped_item",
-                                        "equipment_slot": "offhand",
+                                        "equipment_slot": "mainhand",
                                         "item_condition": {
                                             "type": "origins:empty"
                                         }

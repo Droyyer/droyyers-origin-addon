@@ -1,0 +1,11 @@
+{
+    "name": "Large Volume",
+    "description": "Do to your ridiculous size, you have far more air, and hence far more health. Extreme Fragility is reverted back to 10 hearts!",
+
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+      "type": "origins:revoke_power",
+      "power": "pooltoy-origin:fragile",
+      "source": "pooltoy-origin:pooltoy"
+    }
+}

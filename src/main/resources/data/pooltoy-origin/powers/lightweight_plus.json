@@ -1,0 +1,24 @@
+{
+    "name": "Even Lighter",
+    "description": "With no modifications and hence no extra weight, your sneak jump (From Lighter than a Feather power) is converted into a small dash!",
+    "badges": [
+        {
+            "type": "origins:keybind",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": "Sneak while jumping to perform a dash!"
+        }
+    ],
+
+    "type": "origins:modify_jump",
+    "entity_action": {
+        "type": "origins:add_velocity",
+        "z": 250,
+        "space": "local",
+        "set": true,
+        "client": true,
+        "server": true
+    },
+    "condition": {
+        "type": "origins:sneaking"
+    }
+}

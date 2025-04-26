@@ -1,0 +1,19 @@
+{
+	"name": "Lamia",
+	"description": "Instead of a pair of legs, you have a long snake-like tail. While it has some advantages, it's also very good at catching pointy twigs and pebbles out of the grass, which will puncture you from time to time.",
+
+	"powers": [
+		"pooltoy-origin:slithering_serpent",
+		"pooltoy-origin:hesitation",
+		"pooltoy-origin:tail_air_reserves",
+
+		"pooltoy-origin:random_walk_puncture",
+		"pooltoy-origin:tail_sharp_vulnerability",
+
+		"pooltoy-origin:anti_jump"
+	],
+
+	"icon": "minecraft:scute",
+	"order": 4,
+	"impact": 2
+}

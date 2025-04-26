@@ -1,0 +1,43 @@
+{
+  "name": "Pebble Catcher",
+  "description": "Due to your tail having such a large contact surface with the ground, there's a chance for it to stumble into a sharp pebble, twig, or any other kind of sharp object naturally occuring outdoors. This won't take effect when walking on manmade blocks (Eg. Planks, wool, stone bricks, etc.)",
+
+  "type": "origins:action_over_time",
+  "interval": 50,
+  "entity_action": {
+    "type": "origins:chance",
+    "chance": 0.05,
+    "action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "amplifyeffect @s pooltoy-origin:punctured 1 9"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "effect clear @s pooltoy-origin:sealed"
+        },
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:item.trident.hit"
+        }
+      ]
+    }
+  },
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:on_block",
+        "block_condition": {
+          "type": "origins:in_tag",
+          "tag": "pooltoy-origin:outdoor_blocks"
+        }
+      },
+      {
+        "type": "origins:moving"
+      }
+    ]
+  }
+}

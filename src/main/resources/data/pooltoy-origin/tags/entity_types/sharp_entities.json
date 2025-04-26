@@ -12,19 +12,19 @@
     "minecraft:elder_guardian",
 
 
-    "aquamirae:maw",
-    "aquamirae:anglerfish",
-    "aquamirae:maze_mother",
-    "aquamirae:eel",
+    { "id": "aquamirae:maw", "required": false },
+    { "id": "aquamirae:anglerfish", "required": false },
+    { "id": "aquamirae:maze_mother", "required": false },
+    { "id": "aquamirae:eel", "required": false },
 
 
-    "bosses_of_mass_destruction:gauntlet",
-    "bosses_of_mass_destruction:lich",
-    "bosses_of_mass_destruction:petal_blade",
-    "bosses_of_mass_destruction:void_blossom",
+    { "id": "bosses_of_mass_destruction:gauntlet", "required": false },
+    { "id": "bosses_of_mass_destruction:lich", "required": false },
+    { "id": "bosses_of_mass_destruction:petal_blade", "required": false },
+    { "id": "bosses_of_mass_destruction:void_blossom", "required": false },
 
 
-    "dungeonnowloading:chaos_spawner_projectile",
-    "dungeonnowloading:sealed_chaos"
+    { "id": "dungeonnowloading:chaos_spawner_projectile", "required": false },
+    { "id": "dungeonnowloading:sealed_chaos", "required": false }
   ]
 }

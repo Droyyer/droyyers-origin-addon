@@ -20,9 +20,9 @@
                     "compare_to": 0.5
                 },
                 {
-                    "type": "origins:health",
+                    "type": "origins:relative_health",
                     "comparison": ">",
-                    "compare_to": 6
+                    "compare_to": 0.5
                 }
             ]
         }

@@ -17,6 +17,9 @@ public class ModTags {
                 createTag("sharp_blocks");
         public static final TagKey<Block> CRITICALLY_SHARP_BLOCKS =
                 createTag("critically_sharp_blocks");
+        public static final TagKey<Block> OUTDOOR_BLOCKS =
+                createTag("outdoor_blocks");
+
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(PooltoyOrigin.MOD_ID, name));
@@ -37,6 +40,9 @@ public class ModTags {
     public static class MobEntities {
         public static TagKey<EntityType<?>> SHARP_ENTITIES =
                 createTag("sharp_entities");
+        public static TagKey<EntityType<?>> HESITANT =
+                createTag("hesitant");
+
 
         public static TagKey<EntityType<?>> createTag(String name) {
             return TagKey.of(RegistryKeys.ENTITY_TYPE, new Identifier(PooltoyOrigin.MOD_ID, name));

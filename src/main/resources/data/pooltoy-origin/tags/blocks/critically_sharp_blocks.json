@@ -5,6 +5,9 @@
 
 
 
-    "create:mechanical_saw"
+    {
+      "id": "create:mechanical_saw",
+      "required": false
+    }
   ]
 }

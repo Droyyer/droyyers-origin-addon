@@ -1,6 +1,9 @@
 package net.droyyer.pooltoyorigin;
 
+import net.droyyer.pooltoyorigin.block.ModBlocks;
 import net.droyyer.pooltoyorigin.effect.ModEffects;
+import net.droyyer.pooltoyorigin.fluid.ModFluids;
+import net.droyyer.pooltoyorigin.item.ModItemGroups;
 import net.droyyer.pooltoyorigin.item.ModItems;
 import net.droyyer.pooltoyorigin.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
@@ -25,6 +28,11 @@ public class PooltoyOrigin implements ModInitializer {
 		LOGGER.info("Loading " + MOD_ID);
 
 		ModItems.registerItems();
+		ModItemGroups.registerItemGroups();
+
+		ModBlocks.registerBlocks();
+		ModFluids.registerFluids();
+
 		ModEffects.registerEffects();
 		ModRegistries.registerCommands();
 

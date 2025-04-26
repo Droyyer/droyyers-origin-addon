@@ -1,0 +1,39 @@
+{
+  "order": 215893,
+  "replace": false,
+
+  "hidden": true,
+  "auto_choose": true,
+
+  "origins": [
+    {
+      "condition": {
+        "type": "origins:origin",
+        "inverted": true,
+        "origin": "pooltoy-origin:pooltoy"
+      },
+      "origins": [
+        "pooltoy-origin:none"
+      ]
+    },
+
+    {
+      "condition": {
+        "type": "origins:origin",
+        "origin": "pooltoy-origin:pooltoy"
+      },
+      "origins": [
+        "pooltoy-origin:default",
+        "pooltoy-origin:large",
+        "pooltoy-origin:winged",
+        "pooltoy-origin:aquatic",
+        "pooltoy-origin:lamia",
+        "pooltoy-origin:serperior"
+      ]
+    }
+  ],
+
+  "name": "Pooltoy Subtype",
+  "missing_name": "None",
+  "missing_description": "Pooltoy subtype not selected"
+}

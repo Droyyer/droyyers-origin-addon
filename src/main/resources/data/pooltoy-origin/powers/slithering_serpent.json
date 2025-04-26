@@ -1,0 +1,155 @@
+{
+  "name": "Slithering Serpent",
+  "description": "Due to your lack of legs, you are unable to jump, but in return you can slither up two blocks! You also have increased mobility and attack speed. As an addition, you are over half a block taller than usual.",
+  "badges": [
+    {
+      "sprite": "origins:textures/gui/badge/info.png",
+      "text": "The silence of your slithering prevents your walking and sprinting from triggering sculk sensors!"
+    }
+  ],
+  "type": "origins:multiple",
+  "no_jumping": {
+    "type": "origins:modify_jump",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -1
+    }
+  },
+  "slithering": {
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:step_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:hitbox_width 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:hitbox_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:eye_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:step_height 4 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:hitbox_width 1.25 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:eye_height 1.4 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:hitbox_height 1.43 @s"
+        }
+      ]
+    },
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale reset @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay reset @s"
+        }
+      ]
+    },
+    "entity_action_added": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:step_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:hitbox_width 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:hitbox_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:eye_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:step_height 4 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:hitbox_width 1.25 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:eye_height 1.4 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:hitbox_height 1.43 @s"
+        }
+      ]
+    },
+    "entity_action_respawned": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:step_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:hitbox_width 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:hitbox_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale delay set pehkui:eye_height 0 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:step_height 4 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:hitbox_width 1.25 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:eye_height 1.4 @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:hitbox_height 1.43 @s"
+        }
+      ]
+    }
+  },
+  "movement_speed": {
+    "type": "origins:attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "addition",
+      "value": 0.03
+    },
+    "update_health": false
+  }
+}
