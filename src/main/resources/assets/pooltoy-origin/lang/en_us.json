@@ -1,15 +1,29 @@
 {
   "item.pooltoy-origin.spruce_resin": "Spruce Resin",
   "item.pooltoy-origin.rubber": "Rubber",
+  "item.pooltoy-origin.vinyl_polymer": "Vinyl Polymer",
+  "item.pooltoy-origin.crushed_nether_star": "Crushed Nether Star",
+  "item.pooltoy-origin.conscious_eye": "Eye of Sentience",
   "item.pooltoy-origin.rubber_patch": "Rubber Patch",
   "item.pooltoy-origin.ducttape": "Ducttape",
+  "item.pooltoy-origin.convergence": "Convergence",
   "item.pooltoy-origin.air_pump": "Air Pump",
 
+  "item.minecraft.potion.effect.polymer_potion": "Potion of Polymerization",
+  "item.minecraft.splash_potion.effect.polymer_potion": "Splash Potion of Polymerization",
+  "item.minecraft.lingering_potion.effect.polymer_potion": "Lingering Potion of Polymerization",
+  "item.minecraft.tipped_arrow.effect.polymer_potion": "Arrow of Polymerization",
+
   "block.pooltoy-origin.highlighted_sculk": "Highlighted Sculk",
+
+  "block.pooltoy-origin.liquid_magic_block": "Liquid Magic",
+  "block.pooltoy-origin.liquid_magic": "Liquid Magic",
+  "block.pooltoy-origin.flowing_liquid_magic": "Liquid Magic",
 
   "effect.pooltoy-origin.punctured": "Punctured",
   "effect.pooltoy-origin.sealed": "Sealed",
   "effect.pooltoy-origin.deflating": "Open Nozzle",
+  "effect.pooltoy-origin.polymerization": "Polymerization",
 
   "itemgroup.pooltoy_origin": "Pooltoy Origin",
 

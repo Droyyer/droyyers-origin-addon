@@ -1,0 +1,14 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "processingTime": 1000,
+  "results": [
+    {
+      "item": "pooltoy-origin:crushed_nether_star"
+    }
+  ]
+}

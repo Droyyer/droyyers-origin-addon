@@ -19,6 +19,7 @@
       "key": "key.origins.ternary_active"
     }
   },
+
   "main": {
     "type": "origins:elytra_flight",
     "render_elytra": true,

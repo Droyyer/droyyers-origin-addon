@@ -18,6 +18,12 @@
       {
         "type": "origins:execute_command",
         "command": "scale set pehkui:height 0.01 @s"
+      },
+      {
+        "type": "origins:play_sound",
+        "sound": "minecraft:entity.puffer_fish.blow_out",
+        "volume": 1,
+        "pitch": 0.3
       }
     ]
   }

@@ -2,17 +2,21 @@ package net.droyyer.pooltoyorigin.item;
 
 import net.droyyer.pooltoyorigin.PooltoyOrigin;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     public static final Item SPRUCE_RESIN = registerItem("spruce_resin", new Item(new FabricItemSettings()));
     public static final Item RUBBER = registerItem("rubber", new Item(new FabricItemSettings()));
+    public static final Item CRUSHED_NETHER_STAR = registerItem("crushed_nether_star", new Item(new FabricItemSettings()));
+    public static final Item CONSCIOUS_EYE = registerItem("conscious_eye", new Item(new FabricItemSettings()
+            .rarity(Rarity.RARE)));
+    public static final Item VINYL_POLYMER = registerItem("vinyl_polymer", new Item(new FabricItemSettings()));
+    public static final Item CONVERGENCE = registerItem("convergence", new Item(new FabricItemSettings()
+            .rarity(Rarity.EPIC)));
 
     public static final Item RUBBER_PATCH = registerItem("rubber_patch", new Item(new FabricItemSettings()));
     public static final Item DUCTTAPE = registerItem("ducttape", new Item(new FabricItemSettings()

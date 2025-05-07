@@ -1,6 +1,7 @@
 package net.droyyer.pooltoyorigin.effect;
 
 import net.droyyer.pooltoyorigin.PooltoyOrigin;
+import net.droyyer.pooltoyorigin.item.ModItems;
 import net.droyyer.pooltoyorigin.util.ModDamageTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -23,7 +24,7 @@ public class DeflatingStatusEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-            if (entity.age % 25 == 0) {
+            if (entity.age % 25 == 0 && !(entity.getMainHandStack().getItem() == ModItems.AIR_PUMP)) {
                 entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.AIR_LOSS), 1.0f);
             }
         }

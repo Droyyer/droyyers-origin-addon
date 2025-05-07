@@ -1,0 +1,30 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:ancient_debris"
+    },
+    {
+      "item": "minecraft:blackstone"
+    },
+    {
+      "item": "minecraft:blackstone"
+    },
+    {
+      "item": "minecraft:blackstone"
+    },
+    {
+      "amount": 81000,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "item": "pooltoy-origin:vinyl_polymer"
+    }
+  ]
+}

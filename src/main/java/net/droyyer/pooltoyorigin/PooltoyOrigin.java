@@ -5,9 +5,13 @@ import net.droyyer.pooltoyorigin.effect.ModEffects;
 import net.droyyer.pooltoyorigin.fluid.ModFluids;
 import net.droyyer.pooltoyorigin.item.ModItemGroups;
 import net.droyyer.pooltoyorigin.item.ModItems;
+import net.droyyer.pooltoyorigin.potion.ModPotions;
 import net.droyyer.pooltoyorigin.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistry;
+import net.minecraft.potion.Potions;
+import net.minecraft.recipe.Ingredient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +38,9 @@ public class PooltoyOrigin implements ModInitializer {
 		ModFluids.registerFluids();
 
 		ModEffects.registerEffects();
+		ModPotions.registerPotions();
+		FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, Ingredient.ofItems(ModItems.CONVERGENCE), ModPotions.POLYMER_POTION.value());
+
 		ModRegistries.registerCommands();
 
 	}

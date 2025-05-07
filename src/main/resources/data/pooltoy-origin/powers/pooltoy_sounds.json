@@ -1,0 +1,23 @@
+{
+  "hidden": true,
+  "type": "origins:multiple",
+
+  "toggle": {
+    "type": "origins:toggle",
+    "active_by_default": true,
+    "key": {
+      "key": "key.origins.octonary_active"
+    }
+  },
+
+  "movement_step": {
+    "type": "apugli:custom_footstep",
+    "sound": "minecraft:entity.leash_knot.place",
+    "volume": 0.2,
+    "pitch": 0.8,
+    "condition": {
+      "type": "origins:power_active",
+      "power": "*:*_toggle"
+    }
+  }
+}

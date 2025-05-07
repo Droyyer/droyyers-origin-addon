@@ -1,0 +1,175 @@
+{
+  "hidden": true,
+
+  "type": "origins:multiple",
+
+  "overwrite": {
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+      "type": "origins:revoke_power",
+      "power": "pooltoy-origin:squish",
+      "source": "pooltoy-origin:pooltoy"
+    }
+  },
+
+  "squish": {
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:sneaking"
+        },
+        {
+          "type": "origins:power_active",
+          "power": "*:*_toggle"
+        },
+        {
+          "type": "origins:relative_health",
+          "comparison": "<=",
+          "compare_to": 0.5
+        },
+        {
+          "inverted": true,
+          "type": "origins:creative_flying"
+        }
+      ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:if_else_list",
+          "actions": [
+            {
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 0.75"
+              },
+              "condition": {
+                "type": "origins:dimension",
+                "dimension": "minecraft:overworld"
+              }
+            },
+            {
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 0.55"
+              },
+              "condition": {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_nether"
+              }
+            },
+            {
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 1.125"
+              },
+              "condition": {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_end"
+              }
+            }
+          ]
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:third_person 1.25"
+        },
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:entity.puffer_fish.blow_out",
+          "volume": 1,
+          "pitch": 0.3
+        }
+      ]
+    },
+    "falling_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:if_else_list",
+          "actions": [
+            {
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 1.5"
+              },
+              "condition": {
+                "type": "origins:dimension",
+                "dimension": "minecraft:overworld"
+              }
+            },
+            {
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 1.1"
+              },
+              "condition": {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_nether"
+              }
+            },
+            {
+              "action": {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 2.25"
+              },
+              "condition": {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_end"
+              }
+            }
+          ]
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:third_person 1"
+        },
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:entity.puffer_fish.blow_up",
+          "volume": 1,
+          "pitch": 0.3
+        }
+      ]
+    }
+  },
+  "actionbar": {
+    "condition": {
+      "inverted": true,
+      "type": "origins:power_active",
+      "power": "cecaelia:invertebrate_toggle"
+    },
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "rising_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale reset"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "title @s actionbar [\"\",{\"text\":\"Squishing: \"},{\"text\":\"OFF\",\"color\":\"red\"}]"
+        }
+      ]
+    },
+    "falling_action": {
+      "type": "origins:execute_command",
+      "command": "title @s actionbar [\"\",{\"text\":\"Squishing: \"},{\"text\":\"ON\",\"color\":\"green\"}]"
+    }
+  },
+  "toggle": {
+    "type": "origins:toggle",
+    "active_by_default": true,
+    "key": {
+      "key": "key.origins.secondary_active",
+      "continuous": false
+    },
+    "retain_state": true
+  }
+}

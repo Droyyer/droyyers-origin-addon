@@ -10,30 +10,44 @@
 	"air_pump": {
 		"type": "origins:active_self",
 		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:heal",
-					"amount": 1
-				},
-				{
-					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:slowness",
-						"duration": 60,
-						"amplifier": 2,
-						"is_ambient": true,
-						"show_particles": false,
-						"show_icon": false
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:status_effect",
+				"effect": "pooltoy-origin:deflating",
+				"min_duration": -1
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:heal",
+						"amount": 1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effect": {
+							"effect": "minecraft:slowness",
+							"duration": 45,
+							"amplifier": 1,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": false
+						}
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:block.lava.extinguish",
+						"volume": 0.9,
+						"pitch": 1.3
 					}
-				},
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:block.lava.extinguish"
-				}
-			]
+				]
+			},
+			"else_action": {
+				"type": "origins:execute_command",
+				"command": "/title @s actionbar {\"text\":\"Your nozzle must be open to use an air pump!\",\"color\":\"red\"}"
+			}
 		},
-		"cooldown": 50,
+		"cooldown": 35,
 		"hud_render": {
 			"should_render": false
 		},
@@ -187,17 +201,34 @@
 				"min_duration": -1
 			},
 			"if_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:clear_effect",
-						"effect": "pooltoy-origin:deflating"
-					},
-					{
-						"type": "origins:play_sound",
-						"sound": "minecraft:entity.item.pickup"
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "pooltoy-origin:air_pump"
+						}
 					}
-				]
+				},
+				"if_action": {
+					"type": "origins:execute_command",
+					"command": "/title @s actionbar {\"text\":\"Your nozzle cannot be closed while having an air pump equipped!\",\"color\":\"red\"}"
+				},
+				"else_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:clear_effect",
+							"effect": "pooltoy-origin:deflating"
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "minecraft:entity.item.pickup"
+						}
+					]
+				}
 			},
 			"else_action": {
 				"type": "origins:and",

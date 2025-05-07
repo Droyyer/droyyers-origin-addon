@@ -1,0 +1,57 @@
+{
+  "hidden": true,
+  "type": "origins:multiple",
+
+  "main": {
+    "type": "origins:action_over_time",
+    "interval": 2,
+    "entity_action": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "origins:status_effect",
+        "effect": "pooltoy-origin:polymerization"
+      },
+      "if_action": {
+        "type": "origins:nothing"
+      },
+      "else_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:execute_command",
+            "command": "origin set @s origins:origin pooltoy-origin:pooltoy"
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "origin gui @s pooltoy-origin:pooltoy_subtype"
+          },
+          {
+            "type": "origins:play_sound",
+            "sound": "minecraft:entity.ender_eye.death"
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "power revoke @s pooltoy-origin:polymer"
+          }
+        ]
+      }
+    }
+  },
+
+  "intro": {
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "/title @s actionbar {\"text\":\"Something feels off...\",\"color\":\"white\"}"
+        },
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:block.bell.resonate"
+        }
+      ]
+    }
+  }
+}

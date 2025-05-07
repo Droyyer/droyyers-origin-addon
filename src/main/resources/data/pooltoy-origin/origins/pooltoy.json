@@ -8,13 +8,16 @@
 		"pooltoy-origin:blunt_immunity",
 		"pooltoy-origin:func_immortality",
 		"pooltoy-origin:float",
+		"pooltoy-origin:squish",
 
 		"pooltoy-origin:dimension_scale",
 
 		"pooltoy-origin:sharp_vulnerability",
+		"pooltoy-origin:explosion_puncture",
 		"pooltoy-origin:synthetic_regen",
 		"pooltoy-origin:fragile",
 
+		"pooltoy-origin:pooltoy_sounds",
 		"pooltoy-origin:disable_hunger",
 		"pooltoy-origin:actor_synthetic_regen"
 	],

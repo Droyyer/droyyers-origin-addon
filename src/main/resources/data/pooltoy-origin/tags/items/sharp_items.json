@@ -1,17 +1,10 @@
 {
   "replace": false,
   "values": [
-    "minecraft:wooden_sword",
-    "minecraft:stone_sword",
-    "minecraft:iron_sword",
-    "minecraft:diamond_sword",
-    "minecraft:netherite_sword",
+    "#minecraft:swords",
+    "#minecraft:axes",
 
-    "minecraft:wooden_axe",
-    "minecraft:stone_axe",
-    "minecraft:iron_axe",
-    "minecraft:diamond_axe",
-    "minecraft:netherite_axe",
+    { "id": "#c:tools/knives", "required": false },
 
 
 
@@ -33,9 +26,6 @@
     { "id": "basicweapons:diamond_glaive", "required": false },
     { "id": "basicweapons:netherite_glaive", "required": false },
 
-    { "id": "ae2:certus_quartz_sword", "required": false },
-    { "id": "ae2:nether_quartz_sword", "required": false },
-    { "id": "ae2:fluix_sword", "required": false },
 
     { "id": "aquamirae:terrible_sword", "required": false },
     { "id": "aquamirae:fin_cutter", "required": false },
@@ -44,14 +34,6 @@
     { "id": "aquamirae:coral_lance", "required": false },
     { "id": "aquamirae:dagger_of_greed", "required": false },
 
-    { "id": "gobber2:gobber2_sword", "required": false },
-    { "id": "gobber2:gobber2_sword_nether", "required": false },
-    { "id": "gobber2:gobber2_sword_end", "required": false },
-    { "id": "gobber2:gobber2_sword_sniper", "required": false },
-
-    { "id": "gobber2:gobber2_axe", "required": false },
-    { "id": "gobber2:gobber2_axe_nether", "required": false },
-    { "id": "gobber2:gobber2_axe_end", "required": false },
 
     { "id": "gobber2:gobber2_tree_axe", "required": false },
     { "id": "gobber2:gobber2_tree_axe_nether", "required": false },

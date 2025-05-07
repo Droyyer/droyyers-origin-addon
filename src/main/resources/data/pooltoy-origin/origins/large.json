@@ -4,7 +4,8 @@
 
 	"powers": [
 		"pooltoy-origin:not_fragile",
-		"pooltoy-origin:large_dimension_scale"
+		"pooltoy-origin:large_dimension_scale",
+		"pooltoy-origin:large_squish"
 	],
 
 	"icon": "minecraft:iron_chestplate",

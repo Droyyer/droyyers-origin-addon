@@ -1,0 +1,21 @@
+{
+  "type": "create:compacting",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "pooltoy-origin:crushed_nether_star"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "amount": 81000,
+      "fluid": "pooltoy-origin:liquid_magic"
+    }
+  ],
+  "results": [
+    {
+      "item": "pooltoy-origin:conscious_eye"
+    }
+  ]
+}

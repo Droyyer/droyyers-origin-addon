@@ -22,6 +22,11 @@ public class ModItemGroups {
 
                         entries.add(ModItems.RUBBER);
                         entries.add(ModItems.SPRUCE_RESIN);
+                        entries.add(ModItems.VINYL_POLYMER);
+
+                        entries.add(ModItems.CRUSHED_NETHER_STAR);
+                        entries.add(ModItems.CONSCIOUS_EYE);
+                        entries.add(ModItems.CONVERGENCE);
 
                     }).build());
 

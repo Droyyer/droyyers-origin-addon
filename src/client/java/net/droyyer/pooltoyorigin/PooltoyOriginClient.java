@@ -15,9 +15,9 @@ public class PooltoyOriginClient implements ClientModInitializer {
 
 		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_LIQUID_MAGIC, ModFluids.FLOWING_LIQUID_MAGIC,
 			new SimpleFluidRenderHandler(
-					new Identifier("minecraft:block/lava_still"),
-					new Identifier("minecraft:block/lava_flow"),
-					0x00E052
+					new Identifier("minecraft:block/water_still"),
+					new Identifier("minecraft:block/water_flow"),
+					0xCA03FC
 		));
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
 				ModFluids.STILL_LIQUID_MAGIC, ModFluids.FLOWING_LIQUID_MAGIC);

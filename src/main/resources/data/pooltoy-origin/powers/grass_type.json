@@ -1,35 +1,70 @@
 {
   "name": "Grass Type",
-  "description": "Being a grass type Pokemon, you are really vulnerable to any sort of fire. You take double the damage from any source of such.",
+  "description": "Being a grass type Pokemon, you are exceptionally vulnerable to fire. Any fire source punctures you twice as much.",
 
-  "type": "origins:modify_damage_taken",
-  "damage_condition": {
-    "type": "origins:or",
-    "conditions": [
-      {
-        "type": "origins:name",
-        "name": "fireball"
-      },
-      {
-        "type": "origins:name",
-        "name": "hotFloor"
-      },
-      {
-        "type": "origins:name",
-        "name": "inFire"
-      },
-      {
-        "type": "origins:name",
-        "name": "lava"
-      },
-      {
-        "type": "origins:name",
-        "name": "onFire"
-      }
-    ]
+  "type": "origins:multiple",
+  "sharp_attack_1": {
+    "type": "origins:action_when_damage_taken",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "amplifyeffect @s pooltoy-origin:punctured 1 9"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "effect clear @s pooltoy-origin:sealed"
+        },
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:item.trident.hit"
+        }
+      ]
+    },
+    "damage_condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:name",
+          "name": "inFire"
+        },
+        {
+          "type": "origins:name",
+          "name": "fireball"
+        },
+        {
+          "type": "origins:name",
+          "name": "hotFloor"
+        }
+      ]
+    },
+    "cooldown": 10
   },
-  "modifier": {
-    "operation": "multiply_total",
-    "value": 1
+
+  "sharp_attack_2": {
+    "type": "origins:action_when_damage_taken",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "amplifyeffect @s pooltoy-origin:punctured 1 9"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "effect clear @s pooltoy-origin:sealed"
+        },
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:item.trident.hit"
+        }
+      ]
+    },
+    "damage_condition": {
+      "type": "origins:name",
+      "name": "lava"
+    },
+    "cooldown": 10
   }
 }

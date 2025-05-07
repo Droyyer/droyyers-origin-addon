@@ -1,0 +1,27 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "create:experience_block"
+    },
+    {
+      "item": "minecraft:enchanted_book"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "results": [
+    {
+      "amount": 20250,
+      "fluid": "pooltoy-origin:liquid_magic"
+    }
+  ]
+}
