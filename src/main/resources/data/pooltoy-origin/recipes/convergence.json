@@ -1,6 +1,5 @@
 {
-  "type": "create:mixing",
-  "heatRequirement": "superheated",
+  "type": "create:compacting",
   "ingredients": [
     {
       "item": "pooltoy-origin:conscious_eye"
@@ -10,16 +9,11 @@
     },
     {
       "item": "pooltoy-origin:vinyl_polymer"
-    },
-    {
-      "amount": 27000,
-      "fluid": "minecraft:water"
     }
   ],
   "results": [
     {
-      "amount": 27000,
-      "fluid": "minecraft:water"
+      "item": "pooltoy-origin:convergence"
     }
   ]
 }

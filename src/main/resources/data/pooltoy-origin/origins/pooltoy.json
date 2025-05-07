@@ -22,7 +22,7 @@
 		"pooltoy-origin:actor_synthetic_regen"
 	],
 
-	"icon": "minecraft:glass_bottle",
+	"icon": "artifacts:helium_flamingo",
 	"order": 9999,
 	"impact": 3
 }
