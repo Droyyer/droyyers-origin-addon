@@ -3,26 +3,28 @@
 	"description": "Inanimate objects brought to the living by magic, they are freed from basic needs and gain significant advantages, at the cost of unfathomable fragility.",
 
 	"powers": [
-		"pooltoy-origin:disable_consumption",
-		"pooltoy-origin:lightweight",
-		"pooltoy-origin:blunt_immunity",
-		"pooltoy-origin:func_immortality",
-		"pooltoy-origin:float",
-		"pooltoy-origin:squish",
+		"pooltoy-origin:main/disable_consumption",
+		"pooltoy-origin:main/lightweight",
+		"pooltoy-origin:main/func_immortality",
+		"pooltoy-origin:main/blunt_immunity",
+		"pooltoy-origin:main/effect_immunity",
+		"pooltoy-origin:main/float",
+		"pooltoy-origin:main/squish",
 
-		"pooltoy-origin:dimension_scale",
+		"pooltoy-origin:main/dimension_scale",
 
-		"pooltoy-origin:sharp_vulnerability",
-		"pooltoy-origin:explosion_puncture",
-		"pooltoy-origin:synthetic_regen",
-		"pooltoy-origin:fragile",
+		"pooltoy-origin:main/sharp_vulnerability",
+		"pooltoy-origin:main/explosion_puncture",
+		"pooltoy-origin:main/synthetic_regen",
+		"pooltoy-origin:main/squishy_arms",
+		"pooltoy-origin:main/fragile",
 
-		"pooltoy-origin:pooltoy_sounds",
-		"pooltoy-origin:disable_hunger",
-		"pooltoy-origin:actor_synthetic_regen"
+		"pooltoy-origin:main/pooltoy_sounds",
+		"pooltoy-origin:main/disable_hunger",
+		"pooltoy-origin:main/actor_synthetic_regen"
 	],
 
-	"icon": "artifacts:helium_flamingo",
+	"icon": "minecraft:stick",
 	"order": 9999,
 	"impact": 3
 }

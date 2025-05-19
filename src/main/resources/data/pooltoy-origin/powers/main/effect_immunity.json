@@ -1,0 +1,16 @@
+{
+  "name": "Effect Immunity",
+  "description": "Due to your nature, most of the effects cannot affect you, as they only prey on living things, with exclusions being effects that are more so magical in function (or any effects added by the mod itself).",
+
+  "type": "origins:effect_immunity",
+  "effects": [
+    "minecraft:nausea",
+    "minecraft:poison",
+    "minecraft:blindness",
+    "minecraft:hunger",
+    "minecraft:slowness",
+
+    "minecraft:regeneration",
+    "minecraft:speed"
+  ]
+}

@@ -1,0 +1,248 @@
+{
+    "name": "Pressure Differences",
+    "description": "Due to air being suspectible to pressure changes, your body will drastically grow or shrink across dimensions. You will remain normal in overworld, but shrink in the nether and grow in the end.",
+
+    "type": "origins:multiple",
+
+    "insta_apply": {
+        "type": "origins:action_on_callback",
+        "entity_action_added": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:dimension",
+                                "inverted": true,
+                                "dimension": "minecraft:the_nether"
+                            },
+                            {
+                                "type": "origins:dimension",
+                                "inverted": true,
+                                "dimension": "minecraft:the_end"
+                            },
+                            {
+                                "type": "origins:power",
+                                "inverted": true,
+                                "power": "pooltoy-origin:large/large_dimension_scale"
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 1 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 1 @s"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.puffer_fish.blow_up",
+                                "volume": 1,
+                                "pitch": 0.3
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:dimension",
+                                "dimension": "minecraft:the_nether"
+                            },
+                            {
+                                "type": "origins:power",
+                                "inverted": true,
+                                "power": "pooltoy-origin:large/large_dimension_scale"
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 0.65 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 0.65 @s"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.puffer_fish.blow_up",
+                                "volume": 1,
+                                "pitch": 0.3
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:dimension",
+                                "dimension": "minecraft:the_end"
+                            },
+                            {
+                                "type": "origins:power",
+                                "inverted": true,
+                                "power": "pooltoy-origin:large/large_dimension_scale"
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 1.5 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 1.5 @s"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.puffer_fish.blow_up",
+                                "volume": 1,
+                                "pitch": 0.3
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+
+    "overworld": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:dimension",
+                            "inverted": true,
+                            "dimension": "minecraft:the_nether"
+                        },
+                        {
+                            "type": "origins:dimension",
+                            "inverted": true,
+                            "dimension": "minecraft:the_end"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:power",
+                    "inverted": true,
+                    "power": "pooltoy-origin:large/large_dimension_scale"
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1 @s"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.puffer_fish.blow_up",
+                    "volume": 1,
+                    "pitch": 0.3
+                }
+            ]
+        }
+    },
+
+    "the_nether": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:the_nether"
+                },
+                {
+                    "type": "origins:power",
+                    "inverted": true,
+                    "power": "pooltoy-origin:large/large_dimension_scale"
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.65 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.65 @s"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.puffer_fish.blow_up",
+                    "volume": 1,
+                    "pitch": 0.3
+                }
+            ]
+        }
+    },
+
+    "the_end": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:the_end"
+                },
+                {
+                    "type": "origins:power",
+                    "inverted": true,
+                    "power": "pooltoy-origin:large/large_dimension_scale"
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1.5 @s"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.puffer_fish.blow_up",
+                    "volume": 1,
+                    "pitch": 0.3
+                }
+            ]
+        }
+    }
+}

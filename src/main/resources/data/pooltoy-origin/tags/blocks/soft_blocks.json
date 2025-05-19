@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:air",
+
+    "#minecraft:wool",
+    "#minecraft:wool_carpets",
+    "#minecraft:beds",
+
+    "minecraft:slime_block",
+    "minecraft:honey_block",
+    "minecraft:sponge",
+    "minecraft:wet_sponge",
+
+    "minecraft:water",
+    "minecraft:lava",
+
+
+
+    { "id": "create:mechanical_drill", "required": false }
+  ]
+}

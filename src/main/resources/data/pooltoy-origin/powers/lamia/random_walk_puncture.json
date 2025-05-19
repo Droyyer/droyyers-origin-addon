@@ -29,11 +29,15 @@
     "type": "origins:and",
     "conditions": [
       {
-        "type": "origins:on_block",
+        "type": "origins:block_collision",
         "block_condition": {
           "type": "origins:in_tag",
-          "tag": "pooltoy-origin:outdoor_blocks"
-        }
+          "inverted": true,
+          "tag": "pooltoy-origin:soft_blocks"
+        },
+        "offset_x": 0,
+        "offset_y": -0.025,
+        "offset_z": 0
       },
       {
         "type": "origins:moving"

@@ -1,0 +1,29 @@
+{
+  "name": "Squishy Arms",
+  "description": "Your arms are far too soft and squishy to break blocks without the help of trusty tools, with exclusions being blocks that can be broken almost instantly (Hardness equal or below 0.2).",
+
+  "type": "origins:modify_break_speed",
+  "modifier": {
+    "operation": "multiply_total",
+    "value": -1
+  },
+
+  "block_condition": {
+    "type": "origins:hardness",
+    "comparison": ">",
+    "compare_to": 0.2
+  },
+  "condition": {
+    "type": "origins:equipped_item",
+    "equipment_slot": "mainhand",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "inverted": true,
+      "ingredient": [
+        {
+          "tag": "c:tools"
+        }
+      ]
+    }
+  }
+}

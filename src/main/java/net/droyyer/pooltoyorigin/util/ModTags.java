@@ -19,6 +19,8 @@ public class ModTags {
                 createTag("critically_sharp_blocks");
         public static final TagKey<Block> OUTDOOR_BLOCKS =
                 createTag("outdoor_blocks");
+        public static final TagKey<Block> SOFT_BLOCKS =
+                createTag("soft_blocks");
 
 
         private static TagKey<Block> createTag(String name) {

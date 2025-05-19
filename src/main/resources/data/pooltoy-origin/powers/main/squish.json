@@ -5,7 +5,7 @@
     {
       "type": "origins:keybind",
       "sprite": "origins:textures/gui/badge/toggle.png",
-      "text": "Can be toggled with"
+      "text": "Can be toggled with %s"
     }
   ],
 
@@ -29,6 +29,11 @@
         {
           "inverted": true,
           "type": "origins:creative_flying"
+        },
+        {
+          "type": "origins:power",
+          "inverted": true,
+          "power": "pooltoy-origin:large/large_squish"
         }
       ]
     },
@@ -137,9 +142,19 @@
   },
   "actionbar": {
     "condition": {
-      "inverted": true,
-      "type": "origins:power_active",
-      "power": "cecaelia:invertebrate_toggle"
+      "type": "origins:and",
+      "conditions": [
+        {
+          "inverted": true,
+          "type": "origins:power_active",
+          "power": "pooltoy-origin:main/squish_toggle"
+        },
+        {
+          "type": "origins:power",
+          "inverted": true,
+          "power": "pooltoy-origin:large/large_squish"
+        }
+      ]
     },
     "type": "origins:action_over_time",
     "interval": 5,
@@ -152,13 +167,13 @@
         },
         {
           "type": "origins:execute_command",
-          "command": "title @s actionbar [\"\",{\"text\":\"Squishing: \"},{\"text\":\"OFF\",\"color\":\"red\"}]"
+          "command": "/title @s actionbar [\"\",{\"text\":\"Squishing: \"},{\"text\":\"OFF\",\"color\":\"red\"}]"
         }
       ]
     },
     "falling_action": {
       "type": "origins:execute_command",
-      "command": "title @s actionbar [\"\",{\"text\":\"Squishing: \"},{\"text\":\"ON\",\"color\":\"green\"}]"
+      "command": "/title @s actionbar [\"\",{\"text\":\"Squishing: \"},{\"text\":\"ON\",\"color\":\"green\"}]"
     }
   },
   "toggle": {
@@ -168,6 +183,12 @@
       "key": "key.origins.secondary_active",
       "continuous": false
     },
-    "retain_state": true
+    "retain_state": true,
+
+    "condition": {
+      "type": "origins:power",
+      "inverted": true,
+      "power": "pooltoy-origin:large/large_squish"
+    }
   }
 }

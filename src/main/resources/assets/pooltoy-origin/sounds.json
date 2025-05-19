@@ -1,0 +1,10 @@
+{
+  "sound_entity_squeakstep": {
+    "subtitle": "sounds.pooltoy-origin.squeakstep",
+    "sounds": [
+      "pooltoy-origin:squeak_1",
+      "pooltoy-origin:squeak_2",
+      "pooltoy-origin:squeak_3"
+    ]
+  }
+}

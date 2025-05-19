@@ -29,5 +29,6 @@
 
   "death.attack.air_loss": "%1$s ran out of air",
   "death.attack.full_air_loss": "%1$s ran out of air",
-  "death.attack.full_air_loss.player": "%1$s ran out of air whilst trying to escape %2$s"
+  "death.attack.full_air_loss.player": "%1$s ran out of air whilst trying to escape %2$s",
+  "sounds.pooltoy-origin.squeakstep": "Squeaky Footsteps"
 }

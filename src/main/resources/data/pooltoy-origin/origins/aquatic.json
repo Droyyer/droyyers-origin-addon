@@ -8,9 +8,10 @@
 		"origins:water_vision",
 		"origins:like_water",
 
-		"pooltoy-origin:aquatic_on_surface",
+		"pooltoy-origin:aquatic/aquatic_on_surface",
 
-		"pooltoy-origin:aquatic_overwrite"
+		"origins:conduit_power_on_land",
+		"pooltoy-origin:aquatic/aquatic_overwrite"
 	],
 
 	"icon": "minecraft:axolotl_bucket",

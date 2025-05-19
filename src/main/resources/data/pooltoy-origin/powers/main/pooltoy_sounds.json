@@ -12,9 +12,8 @@
 
   "movement_step": {
     "type": "apugli:custom_footstep",
-    "sound": "minecraft:entity.leash_knot.place",
-    "volume": 0.2,
-    "pitch": 0.8,
+    "sound": "pooltoy-origin:sound_entity_squeakstep",
+    "volume": 0.925,
     "condition": {
       "type": "origins:power_active",
       "power": "*:*_toggle"

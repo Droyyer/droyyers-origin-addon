@@ -3,7 +3,7 @@
 	"description": "You have a pair of wings, which allow you to fly through the skies the same way you would with an elytra.",
 
 	"powers": [
-		"pooltoy-origin:winged"
+		"pooltoy-origin:winged/winged"
 	],
 
 	"icon": "minecraft:elytra",

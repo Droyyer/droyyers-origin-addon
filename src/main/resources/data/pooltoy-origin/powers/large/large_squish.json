@@ -3,15 +3,6 @@
 
   "type": "origins:multiple",
 
-  "overwrite": {
-    "type": "origins:action_on_callback",
-    "entity_action_added": {
-      "type": "origins:revoke_power",
-      "power": "pooltoy-origin:squish",
-      "source": "pooltoy-origin:pooltoy"
-    }
-  },
-
   "squish": {
     "condition": {
       "type": "origins:and",
@@ -141,7 +132,7 @@
     "condition": {
       "inverted": true,
       "type": "origins:power_active",
-      "power": "cecaelia:invertebrate_toggle"
+      "power": "pooltoy-origin:large/large_squish_toggle"
     },
     "type": "origins:action_over_time",
     "interval": 5,

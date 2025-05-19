@@ -23,6 +23,11 @@
                     "type": "origins:relative_health",
                     "comparison": ">",
                     "compare_to": 0.5
+                },
+                {
+                    "type": "origins:power",
+                    "inverted": true,
+                    "power": "pooltoy-origin:aquatic/aquatic_overwrite"
                 }
             ]
         }
@@ -32,9 +37,19 @@
         "fluid": "minecraft:water",
 
         "condition": {
-            "type": "origins:health",
-            "comparison": ">",
-            "compare_to": 6
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:relative_health",
+                    "comparison": ">",
+                    "compare_to": 0.5
+                },
+                {
+                    "type": "origins:power",
+                    "inverted": true,
+                    "power": "pooltoy-origin:aquatic/aquatic_overwrite"
+                }
+            ]
         }
     },
     "disable_suffocation": {

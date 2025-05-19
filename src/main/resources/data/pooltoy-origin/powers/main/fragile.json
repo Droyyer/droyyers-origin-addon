@@ -7,5 +7,10 @@
       "attribute": "minecraft:generic.max_health",
       "value": -8.0,
       "operation": "addition"
+    },
+    "condition": {
+      "type": "origins:power",
+      "inverted": true,
+      "power": "pooltoy-origin:large/not_fragile"
     }
 }

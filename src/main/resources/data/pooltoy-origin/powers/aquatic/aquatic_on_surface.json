@@ -1,0 +1,18 @@
+{
+  "name": "Hindered Mobility",
+  "description": "Due to your aquatic nature, you are significantly slower outside of water.",
+
+  "type": "origins:conditioned_attribute",
+  "modifier": {
+    "attribute": "minecraft:generic.movement_speed",
+    "operation": "multiply_total",
+    "value": -0.4
+  },
+  "tick_rate": 20,
+  "condition": {
+    "type": "origins:fluid_height",
+    "fluid": "minecraft:water",
+    "comparison": "==",
+    "compare_to": 0
+  }
+}

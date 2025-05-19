@@ -6,6 +6,7 @@ import net.droyyer.pooltoyorigin.fluid.ModFluids;
 import net.droyyer.pooltoyorigin.item.ModItemGroups;
 import net.droyyer.pooltoyorigin.item.ModItems;
 import net.droyyer.pooltoyorigin.potion.ModPotions;
+import net.droyyer.pooltoyorigin.sound.ModSounds;
 import net.droyyer.pooltoyorigin.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
@@ -37,6 +38,7 @@ public class PooltoyOrigin implements ModInitializer {
 		ModBlocks.registerBlocks();
 		ModFluids.registerFluids();
 
+		ModSounds.registerSounds();
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
 		FabricBrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, Ingredient.ofItems(ModItems.CONVERGENCE), ModPotions.POLYMER_POTION.value());

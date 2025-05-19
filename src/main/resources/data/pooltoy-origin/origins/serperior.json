@@ -3,17 +3,17 @@
 	"description": "Like a lamia, but a grass Pokemon... Excuse my poor knowledge of the Pokemon universe, but that's as much as I know.",
 
 	"powers": [
-		"pooltoy-origin:slithering_serpent",
-		"pooltoy-origin:hesitation",
-		"pooltoy-origin:tail_air_reserves",
-		"pooltoy-origin:leaf_storm",
+		"pooltoy-origin:lamia/slithering_serpent",
+		"pooltoy-origin:lamia/hesitation",
+		"pooltoy-origin:lamia/tail_air_reserves",
+		"pooltoy-origin:serperior/leaf_storm",
 
-		"pooltoy-origin:random_walk_puncture",
-		"pooltoy-origin:tail_sharp_vulnerability",
-		"pooltoy-origin:grass_type",
+		"pooltoy-origin:lamia/random_walk_puncture",
+		"pooltoy-origin:lamia/tail_sharp_vulnerability",
+		"pooltoy-origin:serperior/grass_type",
 
-		"pooltoy-origin:anti_jump",
-		"pooltoy-origin:leaf_storm_fuel"
+		"pooltoy-origin:lamia/anti_jump",
+		"pooltoy-origin:serperior/leaf_storm_fuel"
 	],
 
 	"icon": "minecraft:kelp",
